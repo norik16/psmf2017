@@ -1,0 +1,13 @@
+{
+  "name"         : "PSMF-2017",
+  "version"      : "0.0.0",
+  "description"  : "Web for PSMF.",
+  "main"         : "server.js",
+  "author"       : "MRK",
+  "dependencies" : {
+    "express"    : "~4.7.2",
+    "morgan"     : "~1.2.2",
+    "body-parser": "~1.5.2",
+    "method-override": "~2.1.2"
+  }
+}
