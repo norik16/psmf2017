@@ -21,4 +21,4 @@ app.use(methodOverride());
 
 // listen (start app with node server.js) ======================================
 app.listen(4242);
-console.log("App listening on port 8081");
+console.log("App listening on port 4242");
