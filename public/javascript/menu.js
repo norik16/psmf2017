@@ -26,3 +26,27 @@ function stickIt() {
 function resizeIframe(obj) {
     obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
 }
+
+function scroll1() {
+    $('html,body').animate({
+            scrollTop: 0},
+        'slow');
+}
+
+function scroll2() {
+    $('html,body').animate({
+            scrollTop: $("#div2").offset().top - 43},
+        'slow');
+}
+
+function scroll3() {
+    $('html,body').animate({
+            scrollTop: $("#div3").offset().top - 43},
+        'slow');
+}
+
+function scroll4() {
+    $('html,body').animate({
+            scrollTop: $("#div4").offset().top - 43},
+        'slow');
+}

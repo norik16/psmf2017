@@ -50,12 +50,12 @@
 <div id="navWrap">
     <div class="menu header">
         <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
-            <a class="pure-menu-heading" href="">Vize pro lepší budoucnost</a>
+            <button onclick="scroll1()"><a class="pure-menu-heading">Vize pro lepší budoucnost</a></button>
 
             <ul class="pure-menu-list">
-                <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Tour</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sign Up</a></li>
+                <li class="pure-menu-item pure-menu-selected"><button onclick="scroll2()"><a class="pure-menu-link">Důležité informace</a></button></li>
+                <li class="pure-menu-item"><button onclick="scroll3()"><a class="pure-menu-link">Noviny</a></button></li>
+                <li class="pure-menu-item"><button onclick="scroll4()"><a class="pure-menu-link">Organizátoři</a></button></li>
             </ul>
         </div>
     </div>
@@ -66,35 +66,51 @@
 
         <div class="header">
             <div class="home-menu pure-menu pure-menu-horizontal">
-                <a class="pure-menu-heading" href="">Vize pro lepší budoucnost</a>
+                <button onclick="scroll1()"><a class="pure-menu-heading">Vize pro lepší budoucnost</a></button>
 
                 <ul class="pure-menu-list">
-                    <li class="pure-menu-item pure-menu-selected"><a href="#" class="pure-menu-link">Home</a></li>
-                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Tour</a></li>
-                    <li class="pure-menu-item"><a href="#" class="pure-menu-link">Sign Up</a></li>
+                    <li class="pure-menu-item pure-menu-selected"><button onclick="scroll2()"><a class="pure-menu-link">Důležité informace</a></button></li>
+                    <li class="pure-menu-item"><button onclick="scroll3()"><a class="pure-menu-link">Noviny</a></button></li>
+                    <li class="pure-menu-item"><button onclick="scroll4()"><a class="pure-menu-link">Organizátoři</a></button></li>
                 </ul>
             </div>
         </div>
 
 
+        <div id="div2" class="content-head">Důležité informace</div>
 
         <div class="content">
 
-            <em><p>This thingie is also available as a ready-made jQuery plugin at <a href="https://github.com/senff/Sticky-Anything" target="_blank">https://github.com/senff/Sticky-Anything</a> and will allow you to make ANY element sticky -- not just the menu.<br><strong>Now also available as a <a href="https://wordpress.org/plugins/sticky-menu-or-anything-on-scroll/">WordPress plugin!</a></strong></em></p>
-
-            <h2>So how does this thing work?</h2>
-
-            <p>Upon page load, jQuery clones the menu <em>(= the element we want to see sticking at the top of the screen)</em>. The original menu gets class "original" and the cloned one gets class "cloned".</p>
+            <p>Upon page load, jQuery clones the menu. The original menu gets class "original" and the cloned one gets class "cloned".</p>
 
             <p>In the DOM, the cloned one is placed right after the original menu so it becomes a full sibling (twin?) of the original one. With CSS, we make sure that the cloned one is positioned properly to make it stick at the top of the screen -- but is set to <strong>display:none;</strong> so we won't see this sticky one right away.</p>
 
-            <p>Every 10ms (why? see <a href="https://medium.com/@dhg/82ced812e61c#ee02" target="_blank">these do's and don'ts</a>), <strong>stickThis()</strong> is fired and checks the scrolled position and compares it to the top coordinate of the menu. If the scrolled position is equal or higher than the menu top coordinate, it means that we've scrolled past the menu and this is when we want it to be sticky. When that is the case, we make the cloned (sticky) show, and make the original (static) one invisible.</p>
+            <p>Every 10ms (why? see is fired and checks the scrolled position and compares it to the top coordinate of the menu. If the scrolled position is equal or higher than the menu top coordinate, it means that we've scrolled past the menu and this is when we want it to be sticky. When that is the case, we make the cloned (sticky) show, and make the original (static) one invisible.</p>
 
             <p>Obviously, when the scrolled position is not as high as the original menu's top coordinate, it means we haven't scrolled past the menu, and in this case we'll need the "normal" situation (the cloned one doesn't show and the original one does).</p>
         </div>
+        <div id="div3" class="content-head">Noviny</div>
         <div class="newspaper-container">
             <iframe class="newspaper" src="newspaper/newspaper.html" frameborder="0" scrolling="no" onload="resizeIframe(this)">Načítání...</iframe>
         </div>
+        <div id="div4" class="content-head">Organizátoři</div>
+        <div class="content">
+
+            <p>Kuba Suchánek</p>
+            <p>Terka 'tter' Hladíková</p>
+            <p>Ron Luc</p>
+            <p>Martin Kubeša</p>
+            <p>Natka Gayová</p>
+            <p>Lucka Vychodilová</p>
+            <p>Kačenka Rosická</p>
+            <p>Pavla Rudolfová</p>
+
+        </div>
+
+        <div class="bottom">
+            <p>© 2017 Kuba, Ron (kód) & Martin (noviny)</p>
+        </div>
+
     </div>
 
 </div>
