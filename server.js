@@ -22,3 +22,41 @@ app.use(methodOverride());
 // listen (start app with node server.js) ======================================
 app.listen(4242);
 console.log("App listening on port 4242");
+// routes ======================================================================
+
+// // api ---------------------------------------------------------------------
+// // get all todos
+// app.get('/api/todos', function(req, res) {
+//
+//     // use mongoose to get all todos in the database
+//     Todo.find(function(err, todos) {
+//
+//         // if there is an error retrieving, send the error. nothing after res.send(err) will execute
+//         if (err)
+//             res.send(err)
+//
+//         res.json(todos); // return all todos in JSON format
+//     });
+// });
+//
+// // create todo and send back all todos after creation
+// app.post('/api/todos', function(req, res) {
+//
+//     // create a todo, information comes from AJAX request from Angular
+//     Todo.create({
+//         text : req.body.text,
+//         done : false
+//     }, function(err, todo) {
+//         if (err)
+//             res.send(err);
+//
+//         // get and return all the todos after you create another
+//         Todo.find(function(err, todos) {
+//             if (err)
+//                 res.send(err)
+//             res.json(todos);
+//         });
+//     });
+//
+// });
+

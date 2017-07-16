@@ -1,0 +1,213 @@
+/*Anchor rules*/
+
+a {
+    color: #0033cc;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:visited {
+    color: #990000;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:hover {
+    color: #5b7cb9;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+a:active {
+    color: #006600;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+/*The upper portion of the site*/
+
+@font-face {
+    font-family: ComputerNewRoman;
+    src: url(../fonts/cmunrm.ttf);
+}
+
+body {
+    background-color: #dbdad4;
+    color: #000000;
+    font-family: "ComputerNewRoman", Times, serif;
+    border-color: #808080;
+    font-size: 1.5vw;
+}
+
+@font-face {
+    font-family: OldeEnglish;
+    src: url(../fonts/OldeEnglish.ttf);
+}
+
+#logo {
+    margin-top: 1vw;
+    font-family: "OldeEnglish";
+    font-size: 7vw;
+    text-align: center;
+}
+
+#sublogo {
+    text-align: center;
+    border-width: 2px 0px 2px 0px;
+    border-style: solid;
+}
+
+.subHead {
+    font-size: 1.5vw;
+    font-weight: bold;
+    display: block;
+}
+
+.sectionHead {
+    font-size: 1.7vw;
+    font-weight: 900;
+    display: block;
+}
+
+.centerSectionHead {
+    font-size: 4vw;
+    font-weight: 900;
+    display: block;
+}
+
+.centerSectionSubhead {
+    font-size: 2vw;
+    font-style: italic;
+    /*font-weight: 900;*/
+    display: block;
+}
+
+.centerSectionHeadMain {
+    font-size: 7vw;
+    /*font-weight: 900;*/
+    display: block;
+}
+
+.centerSectionSubheadMain {
+    font-size: 4vw;
+    font-style: italic;
+    /*font-weight: 900;*/
+    display: block;
+}
+
+hr { /*horizontal line*/
+    display: block;
+    height: 1px;
+    border-style: solid;
+    border-width: 1px 0px 0px 0px;
+    margin: 0.5vw 0;
+    padding: 0;
+}
+
+#img1 {
+    -webkit-filter: grayscale(40%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(40%);
+}
+
+/* The central portion of the site */
+
+#leftColumn {
+    float: right;
+    width: 60vw;
+    margin-left: 0vw;
+    padding-left: 0vw;
+    margin-right: 1vw;
+    padding-right: 2vw;
+    height: 100%;
+}
+
+#loginBox {
+    margin-bottom: 0.5vw;
+}
+
+#loginBox, #sideAd {
+    border-top: solid 1px silver;
+}
+
+#loginBox input {
+    display: block;
+}
+
+#adSmall {
+    display: block;
+    border: 3px dashed black;
+    padding: 1em;
+    margin-right: 1vw;
+    text-align: center;
+}
+
+#rightColumn {
+    float: right;
+    width: 15vw;
+    height: 100%;
+    margin-left: 1vw;
+    padding-left: 1vw;
+    border-style: solid;
+    border-width: 0px 0px 0px 1px;
+}
+
+.space {
+    border-top: solid 1px;
+    margin-top: 0.5vw;
+}
+
+.centerColumn {
+    padding-top: 0em;
+}
+
+.fourColumns {
+    padding-top: 0em;
+    -webkit-column-count: 4; /* Chrome, Safari, Opera */
+    -moz-column-count: 4; /* Firefox */
+    column-count: 4;
+}
+
+.noPadding {
+    padding: 0;
+    margin: 0;
+}
+
+/* The bottom portion of the site */
+
+#bottomMenu {
+    color: black;
+    background-color: #999999;
+    text-align: center;
+    font-family: arial, sans-serif;
+    font-size: xx-small;
+    clear: both;
+}
+
+/*Rules governing non-layout formatting*/
+
+.floatRight {
+    float: right;
+}
+
+.floatLeft {
+    float: left;
+}
+
+
+.imgbox {
+    border: 0.25vw dashed #c0c0c0;
+    font-size: 0.5vw;
+    padding: 1vw;
+    display: block;
+    float: left;
+    margin-right: 0.5vw;
+    text-align: center;
+}
+
+p.newsItem {
+    margin-top: 1cm;
+}
+
+.news {
+    vertical-align: top;
+}

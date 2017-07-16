@@ -41,12 +41,45 @@ a.pure-button-primary {
     font-size: 120%;
 }
 button {
-
     background: transparent;
     border: none !important;
     font-size:0;
 }
 
+#leftButton {
+    width: 50px;
+    position: fixed;
+    color: white;
+    overflow: visible;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+}
+
+#rightButton {
+    width: 50px;
+    position: fixed;
+    color: white;
+    overflow: visible;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+}
+
+.buttonSymbol {
+    position: fixed;
+
+}
+
+#rightButton:hover {
+    background: rgba(0,0,0,0.69);
+}
+
+#leftButton:hover {
+    background: rgba(0,0,0,0.69);
+}
 
 
 /*
@@ -57,7 +90,7 @@ button {
 .pure-menu-horizontal {
     width: 100%;
     white-space: nowrap;
-    background: #013888;
+    padding: 0pt 50pt 0pt 50pt;
 }
 
 .pure-menu-active > .pure-menu-link, .pure-menu-link:focus, .pure-menu-link:hover {
@@ -111,27 +144,27 @@ button {
  * -- SPLASH STYLES --
  * This is the blue top section that appears on the page.
  */
-@media (min-width: 1600px) {
-    .splash-container {
-        background-image: url("../img/flags1920.jpg");
-    }
-}
-@media (max-width: 1599px) {
-    .splash-container {
-        background-image: url("../img/flags1600.jpg");
-    }
-}
-@media (max-width: 1399px) {
-    .splash-container {
-        background-image: url("../img/flags1400.jpg");
-    }
-}
+/*@media (min-width: 1600px) {*/
+    /*#splash-container {*/
+        /*background-image: url("../img/flags1920.jpg");*/
+    /*}*/
+/*}*/
+/*@media (max-width: 1599px) {*/
+    /*#splash-container {*/
+        /*background-image: url("../img/flags1600.jpg");*/
+    /*}*/
+/*}*/
+/*@media (max-width: 1399px) {*/
+    /*#splash-container {*/
+        /*background-image: url("../img/flags1400.jpg");*/
+    /*}*/
+/*}*/
 
-.splash-container {
+#splash-container {
     background-position: center;
     background-size: cover;
     box-shadow: inset 0px 0px 250px rgba(0,0,0,0.9);
-    background-image: url("../img/flags1400.jpg");
+    background-image: url("../img/back1.1.jpg");
     max-width: 100%;
     z-index: 1;
     overflow: hidden;
@@ -143,7 +176,7 @@ button {
     position: fixed !important;
 }
 
-.splash {
+#splash {
     /* absolute center .splash within .splash-container */
     width: 80%;
     height: 50%;
@@ -151,6 +184,7 @@ button {
     position: absolute;
     top: 100px; left: 0; bottom: 0; right: 0;
     text-align: center;
+
     /*text-transform: uppercase;*/
 }
 
@@ -163,15 +197,12 @@ button {
 }
 
 /* This is the main heading that appears on the blue section */
-.splash-head {
-    font-size: 20px;
-    /*font-weight: bold;*/
-    color: white;
-    padding-top: 0.5em;
-    padding-bottom: 0em;
-    font-weight: 100;
-    border-radius: 5px;
-    line-height: 1em;
+#splash-head {
+    display: block;
+    margin: auto;
+    width: 90%;
+    height: 100%;
+    padding-top: 30px;
 }
 
 /* This is the subheading that appears on the blue section */
@@ -194,10 +225,12 @@ button {
     z-index: 2;
     background: white;
 
+    box-shadow: inset 0px 0px 100px rgba(0,0,0,0.9);
+
 }
 
 .content-head {
-    padding: 10pt 10pt 10pt 10pt;
+    padding: 10pt 50pt 10pt 50pt;
     background-color: grey;
     color: white;
     font-size: 2vw;
@@ -205,11 +238,11 @@ button {
 
 /* We want to give the content area some more padding */
 .content {
-    padding: 1em 1em 3em;
+    padding: 10pt 50pt 10pt 50pt;
 }
 
 /*newspaper*/
-.newspaper {
+#newspaper {
     display: block;
     margin: auto;
     width: 90%;
@@ -218,9 +251,16 @@ button {
 
 .bottom {
     padding: 10pt 10pt 10pt 10pt;
-    background-color: #013888;
     color: white;
     text-align: center;
+}
+
+.blue {
+    background-color: #013888;
+}
+
+.red {
+    background-color: red;
 }
 
 /*
@@ -238,12 +278,12 @@ button {
     }
     /* We decrease the width of the .splash, since we have more width
     to work with */
-    .splash {
+    #splash {
         width: 90%;
         height: 50%;
     }
 
-    .splash-head {
+    #splash-head {
         font-size: 100%;
     }
 
@@ -272,12 +312,12 @@ button {
 
     /* We decrease the width of the .splash, since we have more width
     to work with */
-    .splash {
+    #splash {
         width: 50%;
         height: 50%;
     }
 
-    .splash-head {
+    #splash-head {
         font-size: 250%;
     }
 
@@ -296,7 +336,7 @@ button {
  */
 @media (min-width: 78em) {
     /* We increase the header font size even more */
-    .splash-head {
+    #splash-head {
         font-size: 300%;
     }
 }
