@@ -73,7 +73,7 @@ function loaded() {
 function warpR() {
     var np = $('#newspaper').attr('src');
     var nm = $('#splash-head').attr('src');
-    var ximg = document.getElementById('splash-container'),
+    var ximg = document.getElementById('splash-background'),
         style = ximg.currentStyle || window.getComputedStyle(ximg, false),
         img = style.backgroundImage.slice(4, -1);
     var newnp = np, newnm = nm, newimg = img;
@@ -95,7 +95,7 @@ function warpR() {
 
         image = 1;
 
-        $('#splash-container').css('background-image', 'url(' + newimg + ')');
+        $('#splash-background').css('background-image', 'url(' + newimg + ')');
         $('#splash-head').attr('src', newnm);
         if(version === 1 && news === 1) $('#rightButton').css('z-index', 0);
     }
@@ -110,7 +110,7 @@ function warpR() {
 function warpL() {
     var np = $('#newspaper').attr('src');
     var nm = $('#splash-head').attr('src');
-    var ximg = document.getElementById('splash-container'),
+    var ximg = document.getElementById('splash-background'),
         style = ximg.currentStyle || window.getComputedStyle(ximg, false),
         img = style.backgroundImage.slice(4, -1);
     var newnp = np, newnm = nm, newimg = img;
@@ -130,7 +130,7 @@ function warpL() {
 
         image = 1;
 
-        $('#splash-container').css('background-image', 'url(' + newimg + ')');
+        $('#splash-background').css('background-image', 'url(' + newimg + ')');
         $('#splash-head').attr('src', newnm);
         if(version === newsCount.length - 1 && news === newsCount[version]) $('#leftButton').css('z-index', 0);
     }
@@ -143,8 +143,8 @@ function warpL() {
 
 function switchImg() {
 //    $('#splash-container').css('background-image', 'url(' + url + ')');
-    $('#splash-container').fadeTo('slow', 0.3, function () {
-        var img = document.getElementById('splash-container'),
+    $('#splash-background').fadeTo('slow', 0.3, function () {
+        var img = document.getElementById('splash-background'),
             style = img.currentStyle || window.getComputedStyle(img, false),
             bi = style.backgroundImage.slice(4, -1);
         var url;

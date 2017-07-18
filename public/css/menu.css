@@ -161,14 +161,29 @@ button {
 /*}*/
 
 #splash-container {
+    /*background-position: center;*/
+    /*background-size: cover;*/
+    /*box-shadow: inset 0px 0px 250px rgba(0,0,0,0.9);*/
+    /*background-image: url("../img/back1.1.jpg");*/
+    max-width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    /* The following styles are required for the "scroll-over" effect */
+    width: 100%;
+    height: 96%;
+    top: 0;
+    left: 0;
+    position: fixed !important;
+}
+
+#splash-background {
     background-position: center;
     background-size: cover;
     box-shadow: inset 0px 0px 250px rgba(0,0,0,0.9);
     background-image: url("../img/back1.1.jpg");
     max-width: 100%;
-    z-index: 1;
+    z-index: 0;
     overflow: hidden;
-    /* The following styles are required for the "scroll-over" effect */
     width: 100%;
     height: 96%;
     top: 0;
