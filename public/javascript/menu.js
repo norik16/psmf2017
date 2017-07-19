@@ -9,6 +9,7 @@ var version = 1, news = 1, image = 1;
 
 scrollIntervalID = setInterval(stickIt, 10);
 scrollIntervalID = setInterval(switchImg, 10000);
+scrollIntervalID = setInterval(resizeIframe($("#application")), 100);
 
 window.onload = loaded;
 
@@ -37,6 +38,10 @@ function resizeIframe(obj) {
     obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
 }
 
+$("#newspaper").load(function() {
+    $(this).height( $(this).contents().find("body").height() );
+});
+
 function scroll1() {
     $('html,body').animate({
             scrollTop: 0
@@ -61,6 +66,13 @@ function scroll3() {
 function scroll4() {
     $('html,body').animate({
             scrollTop: $("#div4").offset().top - 43
+        },
+        'slow');
+}
+
+function scroll5() {
+    $('html,body').animate({
+            scrollTop: $("#div5").offset().top - 43
         },
         'slow');
 }

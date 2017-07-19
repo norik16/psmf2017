@@ -264,6 +264,13 @@ button {
     height: 100%;
 }
 
+#application {
+    display: block;
+    margin: auto;
+    width: 90%;
+    /*height: 100%;*/
+}
+
 .bottom {
     padding: 10pt 10pt 10pt 10pt;
     color: white;
