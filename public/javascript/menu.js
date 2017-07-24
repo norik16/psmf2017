@@ -1,9 +1,10 @@
 //$('.nav').addClass('original').clone().insertAfter('.nav').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();
 
-const imgCount = [0, 3];
-const newsCount = [0, 1];
+const imgCount = [0, 3, 1];
+const newsCount = [0, 1, 1];
 const colored = 3;
 const colors = ['', 'blue', 'red'];
+const name = ['', 'Vize - pro lepší budoucnost', 'Vize'];
 
 var version = 1, news = 1, image = 1;
 
@@ -84,16 +85,12 @@ function loaded() {
 
 function warpR() {
     var np = $('#newspaper').attr('src');
-    var nm = $('#splash-head').attr('src');
-    var ximg = document.getElementById('splash-background'),
-        style = ximg.currentStyle || window.getComputedStyle(ximg, false),
-        img = style.backgroundImage.slice(4, -1);
-    var newnp = np, newnm = nm, newimg = img;
+    var img = $('#splash-background').css("background-image");
+    var newnp = np, newimg = img;
 
     if(news === 1) {
-        newnp = np.replace(version + "." + news + ".html", (parseInt(version) - parseInt(1)) + "." + (parseInt(newsCount[version-1])) + ".html");
-        newnm = nm.replace(version + ".html", (parseInt(version) - parseInt(1)) + ".html");
-        newimg = img.replace(version + "." + image + ".jpg", (parseInt(version) - parseInt(1)) + "." + 1 + ".jpg");
+        newnp = np.replace(version + "." + news + ".html", (version - 1) + "." + (newsCount[version-1]) + ".html");
+        newimg = img.replace(version + "." + image + ".jpg", (version - 1) + "." + 1 + ".jpg");
 
         news = newsCount[version-1];
 
@@ -107,29 +104,26 @@ function warpR() {
 
         image = 1;
 
-        $('#splash-background').css('background-image', 'url(' + newimg + ')');
-        $('#splash-head').attr('src', newnm);
-        if(version === 1 && news === 1) $('#rightButton').css('z-index', 0);
+        $('#splash-background').css('background-image', newimg);
+        $('#newspaper').attr('src', newnp);
     }
     else {
-        newnp = np.replace(news + ".html", (parseInt(news) - parseInt(1)) + ".html");
+        newnp = np.replace(news + ".html", news - 1 + ".html");
         news = news - 1;
     }
     $('#newspaper').attr('src', newnp);
     $('#leftButton').css('z-index', 3);
+    if(version === 1 && news === 1) $('#rightButton').css('z-index', 0);
+    document.getElementById("splash-head").innerHTML = name[version];
 }
 
 function warpL() {
     var np = $('#newspaper').attr('src');
-    var nm = $('#splash-head').attr('src');
-    var ximg = document.getElementById('splash-background'),
-        style = ximg.currentStyle || window.getComputedStyle(ximg, false),
-        img = style.backgroundImage.slice(4, -1);
-    var newnp = np, newnm = nm, newimg = img;
-    newnp = np.replace(version + "." + news + ".html", (parseInt(version) + parseInt(news / newsCount[version])) + "." + (parseInt(news % newsCount[version]) + parseInt(1)) + ".html");
+    var img = $('#splash-background').css("background-image");
+    var newnp = np, newimg = img;
+    newnp = np.replace(version + "." + news + ".html", (version + news / newsCount[version]) + "." + (news % newsCount[version] + 1) + ".html");
     if(news / newsCount[version] === 1) {
-        newnm = nm.replace(version + ".html", (parseInt(version) + parseInt(1)) + ".html");
-        newimg = img.replace(version + "." + image + ".jpg", (parseInt(version) + parseInt(1)) + "." + 1 + ".jpg");
+        newimg = img.replace(version + "." + image + ".jpg", (version + 1) + "." + 1 + ".jpg");
         news = 1;
 
         for(i = 1; i <= colored; i++) {
@@ -142,27 +136,25 @@ function warpL() {
 
         image = 1;
 
-        $('#splash-background').css('background-image', 'url(' + newimg + ')');
-        $('#splash-head').attr('src', newnm);
-        if(version === newsCount.length - 1 && news === newsCount[version]) $('#leftButton').css('z-index', 0);
+        $('#splash-background').css('background-image', newimg);
+        $('#newspaper').attr('src', newnp);
     }
     else {
         news = news + 1;
     }
     $('#newspaper').attr('src', newnp);
     $('#rightButton').css('z-index', 3);
+    if(version === newsCount.length - 1 && news === newsCount[version]) $('#leftButton').css('z-index', 0);
+    document.getElementById("splash-head").innerHTML = name[version];
 }
 
 function switchImg() {
 //    $('#splash-container').css('background-image', 'url(' + url + ')');
     $('#splash-background').fadeTo('slow', 0.3, function () {
-        var img = document.getElementById('splash-background'),
-            style = img.currentStyle || window.getComputedStyle(img, false),
-            bi = style.backgroundImage.slice(4, -1);
-        var url;
-        url = bi.replace(image + ".jpg", (parseInt(image % imgCount[version]) + parseInt(1)) + ".jpg");
+        var img = $(this).css("background-image");
+        var newimg = img.replace(image + ".jpg", (image % imgCount[version] + 1) + ".jpg");
         image = image % imgCount[version] + 1;
-        $(this).css('background-image', 'url(' + url + ')');
+        $(this).css('background-image', newimg);
     }).fadeTo('slow', 1);
 
 }

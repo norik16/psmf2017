@@ -180,7 +180,7 @@ button {
     background-position: center;
     background-size: cover;
     box-shadow: inset 0px 0px 250px rgba(0,0,0,0.9);
-    background-image: url("../img/back1.1.jpg");
+    background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url("../img/back1.1.jpg");
     max-width: 100%;
     z-index: 0;
     overflow: hidden;
@@ -205,10 +205,10 @@ button {
 
 /* This is the main heading that appears on the blue section */
 .splash-head-container {
-    border: 3px solid white;
-    border-radius: 5px;
-    line-height: 1em;
-    background: rgba(0,0,0,0.69);
+    /*border: 3px solid white;*/
+    /*border-radius: 5px;*/
+    /*line-height: 1em;*/
+    /*background: rgba(0,0,0,0.69);*/
 }
 
 /* This is the main heading that appears on the blue section */
@@ -217,7 +217,12 @@ button {
     margin: auto;
     width: 90%;
     height: 100%;
+    color: white;
+    font-weight: 100;
+    letter-spacing: 0.05em;
+    opacity: 1;
     padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 /* This is the subheading that appears on the blue section */
@@ -234,7 +239,7 @@ button {
 .content-wrapper {
     /* These styles are required for the "scroll-over" effect */
     position: absolute;
-    top: 96%;
+    top: calc(100% - 3em);
     width: 100%;
     min-height: 40pt;
     z-index: 2;
@@ -248,7 +253,7 @@ button {
     padding: 10pt 50pt 10pt 50pt;
     background-color: grey;
     color: white;
-    font-size: 2vw;
+    font-size: 20pt;
 }
 
 /* We want to give the content area some more padding */
@@ -295,18 +300,8 @@ button {
 @media (max-width: 200pt) {
 
     /* We increase the body font size */
-    body {
+    .header {
         font-size: 4px;
-    }
-    /* We decrease the width of the .splash, since we have more width
-    to work with */
-    #splash {
-        width: 90%;
-        height: 50%;
-    }
-
-    #splash-head {
-        font-size: 50%;
     }
 
 }
@@ -315,18 +310,8 @@ button {
 @media (max-width: 400pt) {
 
     /* We increase the body font size */
-    body {
+    .header {
         font-size: 6px;
-    }
-    /* We decrease the width of the .splash, since we have more width
-    to work with */
-    #splash {
-        width: 90%;
-        height: 50%;
-    }
-
-    #splash-head {
-        font-size: 100%;
     }
 
 }
