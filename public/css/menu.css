@@ -90,7 +90,7 @@ button {
 .pure-menu-horizontal {
     width: 100%;
     white-space: nowrap;
-    padding: 0pt 50pt 0pt 50pt;
+    padding: 0pt calc(20pt + 4vw) 0pt calc(20pt + 4vw);
 }
 
 .pure-menu-active > .pure-menu-link, .pure-menu-link:focus, .pure-menu-link:hover {
@@ -219,6 +219,7 @@ button {
     height: 100%;
     color: white;
     font-weight: 100;
+    font-size: 30pt;
     letter-spacing: 0.05em;
     opacity: 1;
     padding-top: 30px;
@@ -245,12 +246,12 @@ button {
     z-index: 2;
     background: white;
 
-    box-shadow: inset 0px 0px 100px rgba(0,0,0,0.9);
+    box-shadow: inset 0px 0px calc(40pt + 8vw) rgba(0,0,0,0.9);
 
 }
 
 .content-head {
-    padding: 10pt 50pt 10pt 50pt;
+    padding: 10pt calc(20pt + 4vw) 10pt calc(20pt + 4vw);
     background-color: grey;
     color: white;
     font-size: 20pt;
@@ -258,7 +259,7 @@ button {
 
 /* We want to give the content area some more padding */
 .content {
-    padding: 10pt 50pt 10pt 50pt;
+    padding: 10pt calc(20pt + 4vw) 10pt calc(20pt + 4vw);
 }
 
 /*newspaper*/
@@ -270,9 +271,8 @@ button {
 }
 
 #application {
-    display: block;
-    margin: auto;
-    width: 90%;
+    font-size: 30pt;
+    color: #7f8c8d;
     /*height: 100%;*/
 }
 
