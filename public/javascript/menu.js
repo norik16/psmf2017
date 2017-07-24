@@ -1,7 +1,7 @@
 //$('.nav').addClass('original').clone().insertAfter('.nav').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();
 
-const imgCount = [0, 2, 1];
-const newsCount = [0, 1, 1];
+const imgCount = [0, 3];
+const newsCount = [0, 1];
 const colored = 3;
 const colors = ['', 'blue', 'red'];
 
@@ -9,7 +9,7 @@ var version = 1, news = 1, image = 1;
 
 scrollIntervalID = setInterval(stickIt, 10);
 scrollIntervalID = setInterval(switchImg, 10000);
-scrollIntervalID = setInterval(resizeIframe($("#application")), 100);
+scrollIntervalID = setInterval(loaded, 100);
 
 window.onload = loaded;
 
@@ -35,11 +35,11 @@ function stickIt() {
 }
 
 function resizeIframe(obj) {
-    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+    obj.style.height = (parseInt(obj.contentWindow.document.body.scrollHeight) + 50) + 'px';
 }
 
 $("#newspaper").load(function() {
-    $(this).height( $(this).contents().find("body").height() );
+    $(this).height( $(this).contents().find("body").height() + 50);
 });
 
 function scroll1() {
@@ -166,16 +166,6 @@ function switchImg() {
     }).fadeTo('slow', 1);
 
 }
-//
-// function imageSwitch(img) {
-//     var src = img.attr('src');
-//     var rel = img.attr('rel');
-//     img.fadeOut('fast', function() {
-//         img.attr('src', rel);
-//         img.attr('rel', src);
-//         img.fadeIn('fast');
-//     });
-// }
 
 
 

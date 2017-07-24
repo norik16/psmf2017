@@ -149,6 +149,7 @@ hr { /*horizontal line*/
     padding-left: 1vw;
     border-style: solid;
     border-width: 0px 0px 0px 1px;
+    font-size: 1.235vw;
 }
 
 .space {
