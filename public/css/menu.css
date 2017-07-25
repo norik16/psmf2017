@@ -277,6 +277,7 @@ button {
 #application {
     font-size: 30pt;
     color: #7f8c8d;
+	text-decoration: underline;
     /*height: 100%;*/
 }
 
