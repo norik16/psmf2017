@@ -3,6 +3,7 @@ body {
     line-height: 1.7em;
     color: #7f8c8d;
     font-size: 10px;
+	line-height: 1.5em;
 }
 
 /*
@@ -180,7 +181,7 @@ button {
     background-position: center;
     background-size: cover;
     box-shadow: inset 0px 0px 250px rgba(0,0,0,0.9);
-    background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.2)), url("../img/back1.1.jpg");
+    background-image: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url("../img/back1.1.jpg");
     max-width: 100%;
     z-index: 0;
     overflow: hidden;
@@ -221,6 +222,7 @@ button {
     font-weight: 100;
     font-size: 30pt;
     letter-spacing: 0.05em;
+	line-height: 1em;
     opacity: 1;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -230,6 +232,7 @@ button {
 .splash-subhead {
     color: white;
     letter-spacing: 0.05em;
+	line-height: 1em;
     opacity: 1;
 }
 
@@ -255,6 +258,7 @@ button {
     background-color: grey;
     color: white;
     font-size: 20pt;
+	line-height: 1em;
 }
 
 /* We want to give the content area some more padding */

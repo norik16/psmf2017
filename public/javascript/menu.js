@@ -1,10 +1,10 @@
 //$('.nav').addClass('original').clone().insertAfter('.nav').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();
 
-const imgCount = [0, 3, 1];
-const newsCount = [0, 1, 1];
+const imgCount = [0, 3];
+const newsCount = [0, 1];
 const colored = 3;
-const colors = ['', 'blue', 'red'];
-const name = ['', 'Vize - pro lepší budoucnost', 'Vize'];
+const colors = ['', 'blue'];
+const name = ['', 'Vize - pro lepší budoucnost'];
 
 var version = 1, news = 1, image = 1;
 
