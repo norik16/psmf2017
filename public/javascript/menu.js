@@ -78,6 +78,13 @@ function scroll5() {
         'slow');
 }
 
+function scroll6() {
+    $('html,body').animate({
+            scrollTop: $("#div6").offset().top - 43
+        },
+        'slow');
+}
+
 function loaded() {
     if(version === newsCount.length - 1 && news === newsCount[version]) $('#leftButton').css('z-index', 0);
     if(version === 1 && news === 1) $('#rightButton').css('z-index', 0);

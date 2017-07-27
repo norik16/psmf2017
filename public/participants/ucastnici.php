@@ -92,9 +92,7 @@ $u = nacti_ucastniky();
 	</style>
 </head>
 <body>
-	<h1>Účastníci JSMF 2016</h1>
 	<table class="pure-table pure-table-striped">
-		<caption>＠ nejsou @.<br>Automatická aktualizace každou minutu. Přijetí přihlášky může trvat až 5 minut.</caption>
 		<thead>
 			<?php print_row(["Jméno", "Příjmení", "Přezdívka", "Pohlaví", "Směr příjezdu"], TRUE); ?>
 		</thead>
