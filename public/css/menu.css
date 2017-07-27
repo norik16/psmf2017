@@ -281,6 +281,12 @@ button {
 	text-decoration: underline;
     /*height: 100%;*/
 }
+#participants {
+    display: block;
+    margin: auto;
+    width: 90%;
+    height: 500pt;
+}
 
 .bottom {
     padding: 10pt 10pt 10pt 10pt;
