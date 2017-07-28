@@ -86,6 +86,9 @@ function scroll6() {
 }
 
 function loaded() {
+    window.onresize = function() { 
+        resizeIframe($("#participants")[0]);
+    };
     if(version === newsCount.length - 1 && news === newsCount[version]) $('#leftButton').css('z-index', 0);
     if(version === 1 && news === 1) $('#rightButton').css('z-index', 0);
 }
