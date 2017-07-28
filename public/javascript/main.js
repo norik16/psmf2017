@@ -119,7 +119,7 @@ function warpR() {
         news = news - 1;
     }
     $('#newspaper').attr('src', newnp);
-    $('#leftButton').css('z-index', 3);
+    $('#leftButton').css('z-index', 2);
     if(version === 1 && news === 1) $('#rightButton').css('z-index', 0);
     document.getElementById("splash-head").innerHTML = name[version];
 }
@@ -150,7 +150,7 @@ function warpL() {
         news = news + 1;
     }
     $('#newspaper').attr('src', newnp);
-    $('#rightButton').css('z-index', 3);
+    $('#rightButton').css('z-index', 2);
     if(version === newsCount.length - 1 && news === newsCount[version]) $('#leftButton').css('z-index', 0);
     document.getElementById("splash-head").innerHTML = name[version];
 }
