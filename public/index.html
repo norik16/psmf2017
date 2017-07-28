@@ -10,6 +10,7 @@
     <title>PŠMF 2017</title>
     <!-- Styles -->
     <link href='css/menu.css' rel='stylesheet' type='text/css'>
+    <script src="https://cdn.jsdelivr.net/prefixfree/1.0.7/prefixfree.min.js"></script>
 
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 
@@ -22,7 +23,7 @@
 
 
 </head>
-<body>
+<body onresize="resizeIframe($('#newspaper'))">
 
 
 <div id="splash-container" class="pure-img-responsive">
@@ -148,7 +149,7 @@
         <div id="div3" class="content-head">Noviny</div>
         <div class="newspaper-container">
             <iframe id="newspaper" src="newspaper/news1.1.html" frameborder="0" scrolling="no"
-                    onload="resizeIframe(this)">Načítání...
+                    onload="resizeIframe(this)" onresize="resizeIframe(this)">Načítání...
             </iframe>
         </div>
         <div id="div4" class="content-head">Organizátoři</div>
@@ -179,7 +180,7 @@
         </div>
 
         <div id="colored3" class="bottom blue">
-            <p>© 2017 Kuba (kód), Martin (noviny) & Ron</p>
+            <p>© 2017 Kuba (kód), Martin (noviny), Terka a Puf(technick8 podpora) & Ron</p>
         </div>
 
     </div>
@@ -188,7 +189,8 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-<script src="javascript/main.js"></script>
+<script src="javascript/menu.js"></script>
+
 
 </body>
 </html>

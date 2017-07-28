@@ -14,6 +14,9 @@ scrollIntervalID = setInterval(loaded, 100);
 
 window.onload = loaded;
 
+window.onresize = function() {
+    resizeIframe($("#newspaper")[0]);
+}
 
 function stickIt() {
 
