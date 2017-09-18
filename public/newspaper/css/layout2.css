@@ -32,11 +32,12 @@ a:active {
 }
 
 body {
-    background-color: #f4dfc0;
+    background-color: #dbdad4;
     color: #000000;
     font-family: "ComputerNewRoman", Times, serif;
     border-color: #808080;
     font-size: 1.5vw;
+    text-align: justify
 }
 
 @font-face {
@@ -113,7 +114,7 @@ hr { /*horizontal line*/
 
 #leftColumn {
     float: right;
-    width: 60vw;
+    width: 70vw;
     margin-left: 0vw;
     padding-left: 0vw;
     margin-right: 1vw;
@@ -168,16 +169,21 @@ hr { /*horizontal line*/
     column-count: 4;
 }
 
-.fourColumns {
-    padding-top: 0em;
-    -webkit-column-count: 1; /* Chrome, Safari, Opera */
-    -moz-column-count: 1; /* Firefox */
-    column-count: 1;
+.oneColumn {
+    width: 25vw;
 }
 
 .noPadding {
     padding: 0;
     margin: 0;
+}
+
+.q {
+	font-weight: bold;
+}
+
+.textHead {
+	font-size: 2vw;
 }
 
 /* The bottom portion of the site */

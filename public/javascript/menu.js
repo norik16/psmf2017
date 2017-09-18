@@ -1,12 +1,12 @@
 //$('.nav').addClass('original').clone().insertAfter('.nav').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();
 
-const imgCount = [0, 3];
-const newsCount = [0, 1];
+const imgCount = [0, 4];
+const newsCount = [0, 2];
 const colored = 3;
 const colors = ['', 'blue'];
 const name = ['', 'Vize - pro lepší budoucnost'];
 
-var version = 1, news = 1, image = 1;
+var version = 1, news = 2, image = 4;
 
 scrollIntervalID = setInterval(stickIt, 10);
 scrollIntervalID = setInterval(switchImg, 10000);
@@ -122,7 +122,7 @@ function warpR() {
         news = news - 1;
     }
     $('#newspaper').attr('src', newnp);
-    $('#leftButton').css('z-index', 2);
+    $('#leftButton').css('z-index', 3);
     if(version === 1 && news === 1) $('#rightButton').css('z-index', 0);
     document.getElementById("splash-head").innerHTML = name[version];
 }
@@ -131,7 +131,7 @@ function warpL() {
     var np = $('#newspaper').attr('src');
     var img = $('#splash-background').css("background-image");
     var newnp = np, newimg = img;
-    newnp = np.replace(version + "." + news + ".html", (version + news / newsCount[version]) + "." + (news % newsCount[version] + 1) + ".html");
+    newnp = np.replace(version + "." + news + ".html", Math.floor(version + news / newsCount[version]) + "." + (news % newsCount[version] + 1) + ".html");
     if(news / newsCount[version] === 1) {
         newimg = img.replace(version + "." + image + ".jpg", (version + 1) + "." + 1 + ".jpg");
         news = 1;
@@ -153,7 +153,7 @@ function warpL() {
         news = news + 1;
     }
     $('#newspaper').attr('src', newnp);
-    $('#rightButton').css('z-index', 2);
+    $('#rightButton').css('z-index', 3);
     if(version === newsCount.length - 1 && news === newsCount[version]) $('#leftButton').css('z-index', 0);
     document.getElementById("splash-head").innerHTML = name[version];
 }
