@@ -23,6 +23,11 @@ body {
     margin-bottom: 1em;
 }
 
+@font-face {
+    font-family: FreePixel;
+    src: url(../fonts/FreePixel.ttf);
+}
+
 /*
  * -- PURE BUTTON STYLES --
  * I want my pure-button elements to look a little different
@@ -181,7 +186,7 @@ button {
     background-position: center;
     background-size: cover;
     box-shadow: inset 0px 0px 250px rgba(0,0,0,0.9);
-    background-image: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url("../img/back1.4.jpg");
+    background-image: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url("../img/back2.1.jpg");
     max-width: 100%;
     z-index: 0;
     overflow: hidden;
@@ -198,7 +203,7 @@ button {
     height: 50%;
     margin: auto;
     position: absolute;
-    top: 100px; left: 0; bottom: 0; right: 0;
+    top: 0px; left: 0; bottom: 0; right: 0;
     text-align: center;
 
     /*text-transform: uppercase;*/
@@ -266,6 +271,11 @@ button {
     padding: 10pt calc(10pt + 5vw) 10pt calc(10pt + 5vw);
 }
 
+#vizeLogo {
+    max-width: 50%;
+    max-height: 50%;
+}
+
 /*newspaper*/
 #newspaper {
     display: block;
@@ -298,7 +308,7 @@ button {
 }
 
 .red {
-    background-color: red;
+    background-color: #CC0000;
 }
 
 .header {
@@ -306,7 +316,7 @@ button {
 }
 
 /*
- * -- TABLET (AND UP) MEDIA QUERIES --
+ * -- TABLET (AND DOWN) MEDIA QUERIES --
  * On tablets and other medium-sized devices, we want to customize some
  * of the mobile styles.
  */

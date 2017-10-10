@@ -30,7 +30,7 @@
     <div id="splash-background"></div>
     <div id="splash">
         <div class="splash-head-container">
-            <p id="splash-head">Vize - pro lepší budoucnost</p>
+            <p id="splash-head"><img src="img/vize.png" id="vizeLogo"></p>
             <div class="splash-subhead">
                 <p>Podzimní škola matematiky a fyziky</p>
                 <p>Mohelno 25. - 29. 10. 2017</p>
@@ -41,7 +41,7 @@
 
 <div id="navWrap">
     <div class="menu header">
-        <div id="colored1" class="blue home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+        <div id="colored1" class="red home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
             <button onclick="scroll1()"><a class="pure-menu-heading">PŠMF 2017</a></button>
 
             <ul class="pure-menu-list">
@@ -72,7 +72,7 @@
     <div class="content-wrapper">
 
         <div class="header">
-            <div id="colored2" class="blue home-menu pure-menu pure-menu-horizontal">
+            <div id="colored2" class="red home-menu pure-menu pure-menu-horizontal">
                 <button onclick="scroll1()"><a class="pure-menu-heading">PŠMF 2017</a></button>
 
                 <ul class="pure-menu-list">
@@ -148,7 +148,7 @@
         </div>
         <div id="div3" class="content-head">Noviny <small>(ke starším vydáním se dostanete šipkou na pravé straně obrazovky)</small></div>
         <div class="newspaper-container">
-            <iframe id="newspaper" src="newspaper/news1.2.html" frameborder="0" scrolling="no"
+            <iframe id="newspaper" src="newspaper/news2.1.html" frameborder="0" scrolling="no"
                     onload="resizeIframe(this)" onresize="resizeIframe(this)">Načítání...
             </iframe>
         </div>
@@ -173,13 +173,14 @@
             <a id="application" href="https://docs.google.com/forms/d/e/1FAIpQLSco7hhY97Uw87_2GxhAHMQ9RNyAMJtT9H04NAw6xLHL9L8-oQ/viewform?usp=sf_link" target="_blank">K přihlášce</a>
         </div>
         <div id="div6" class="content-head">Účastníci</div>
+        <div class="wordcloud"></div>
         <div class="Participants-container">
             <iframe id="participants" src="participants/ucastnici.php" frameborder="0" scrolling="no"
                     onload="resizeIframe(this)">Načítání...
             </iframe>
         </div>
 
-        <div id="colored3" class="bottom blue">
+        <div id="colored3" class="bottom red">
             <p>© 2017 Kuba (kód), Martin (noviny), Terka a Puf (technická podpora) & Ron</p>
         </div>
 
@@ -189,7 +190,11 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
+<script src="javascript/imagecloud.js"></script>
+
 <script src="javascript/menu.js"></script>
+
+<script src="participants/ucastnici.js.php"></script>
 
 
 </body>

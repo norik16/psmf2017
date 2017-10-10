@@ -1,12 +1,12 @@
 //$('.nav').addClass('original').clone().insertAfter('.nav').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();
 
-const imgCount = [0, 4];
-const newsCount = [0, 2];
+const imgCount = [0, 4, 1];
+const newsCount = [0, 2, 1];
 const colored = 3;
-const colors = ['', 'blue'];
-const name = ['', 'Vize - pro lepší budoucnost'];
+const colors = ['', 'blue', 'red'];
+const name = ['', 'Vize - pro lepší budoucnost', '<img src="img/vize.png">'];
 
-var version = 1, news = 2, image = 4;
+var version = 2, news = 1, image = 4;
 
 scrollIntervalID = setInterval(stickIt, 10);
 scrollIntervalID = setInterval(switchImg, 10000);
@@ -16,6 +16,16 @@ window.onload = loaded;
 
 window.onresize = function() {
     resizeIframe($("#newspaper")[0]);
+}
+
+
+function ready(fn)
+{
+    if (document.readyState != 'loading'){
+        fn();
+    } else {
+        document.addEventListener('DOMContentLoaded', fn);
+    }
 }
 
 function stickIt() {
@@ -160,14 +170,11 @@ function warpL() {
 
 function switchImg() {
 //    $('#splash-container').css('background-image', 'url(' + url + ')');
+    if(imgCount[version] === 1) return;
     $('#splash-background').fadeTo('slow', 0.3, function () {
         var img = $(this).css("background-image");
         var newimg = img.replace(image + ".jpg", (image % imgCount[version] + 1) + ".jpg");
         image = image % imgCount[version] + 1;
         $(this).css('background-image', newimg);
     }).fadeTo('slow', 1);
-
 }
-
-
-
