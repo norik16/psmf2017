@@ -4,9 +4,9 @@ const imgCount = [0, 4, 1];
 const newsCount = [0, 2, 1];
 const colored = 3;
 const colors = ['', 'blue', 'red'];
-const name = ['', 'Vize - pro lepší budoucnost', '<img src="img/vize.png">'];
+const name = ['', 'Vize - pro lepší budoucnost', '<img src="img/vize.png"  id="vizeLogo">'];
 
-var version = 2, news = 1, image = 4;
+var version = 2, news = 1, image = 1;
 
 scrollIntervalID = setInterval(stickIt, 10);
 scrollIntervalID = setInterval(switchImg, 10000);
